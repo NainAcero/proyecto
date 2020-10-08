@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/bg_ui"
+    tools:context=".ui.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorAccent">
+
+        <com.mancj.materialsearchbar.MaterialSearchBar
+            style="@style/MaterialSearchBarLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:mt_hint="Texto de busqueda"
+            app:mt_placeholder="Buscar"
+            app:mt_searchBarColor="@color/colorAccent"
+            app:mt_maxSuggestionsCount="10"
+            app:mt_placeholderColor="@color/colorWhite"
+            app:mt_textColor="@color/colorWhite"
+            app:mt_searchIconTint="@color/colorWhite"
+            app:mt_menuIconTint="@color/colorWhite"
+            app:mt_clearIconTint="@color/colorWhite"
+            app:mt_hintColor="@color/colorGrayLight"
+            app:mt_backIconTint="@color/colorWhite"
+            app:mt_leftTextSelectorTint="@color/colorGrayLight"
+            android:id="@+id/searchBar" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="64dp"
+        android:text="PERSONAS"
+        style="@style/TextAppearance.AppCompat.Medium"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvAppointments"
+        android:layout_marginTop="85dp"
+        android:layout_width="match_parent"
+        android:padding="4dp"
+        tools:listitem="@layout/item_appointment"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addPerson"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_person"
+        android:backgroundTint="@color/colorBgAccent"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="15dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
